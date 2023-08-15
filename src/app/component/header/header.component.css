@@ -23,7 +23,6 @@ h1{
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
     height: 63px;
-    /* background-color: blueviolet; */
 
     display: flex;
     justify-content: space-between;
@@ -58,4 +57,8 @@ li a:hover {
 
     background-color: black;
     color: white;
+}
+.navbar-toggler-icon{
+
+    color: rgb(0, 0, 0, 0);
 }
