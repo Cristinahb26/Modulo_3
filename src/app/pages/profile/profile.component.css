@@ -17,24 +17,25 @@ section{
 
     height: 570px;
     width: 1000px;
-    background-color: rgba(36, 37, 37, 0.3);
-    border: rgb(103, 72, 32, 0.5) double;
-    border-radius: 20px;
-    border-width: 10px;
-    
-
+   
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 
 }
 .caja1{
 
     height: 550px;
-    width: 480px;
+    width: 430px;
     margin-left: 10px;
-    border-right: 4px solid black;
+    background-color: rgba(36, 37, 37, 0.3);
+    border: rgb(103, 72, 32, 0.5) double;
+    border-radius: 20px;
+    border-width: 10px;
+    
+    /* border-right: 4px solid black; */
 
     display: flex;
     flex-direction: column;
@@ -99,7 +100,7 @@ h3{
 }
 .datos{
 
-    height: 50px;
+    height: 45px;
     width: 400px;
     margin-left: 50px;
 
@@ -129,7 +130,12 @@ label{
 .caja2{
 
     height: 550px;
-    width: 480px;
+    width: 430px;
+    background-color: rgba(36, 37, 37, 0.3);
+    border: rgb(103, 72, 32, 0.5) double;
+    border-radius: 20px;
+    border-width: 10px;
+    
 
     display: flex;
     flex-direction: column;
@@ -153,7 +159,7 @@ label{
 }
 h2{
 
-    font-size: 40px;
+    font-size: 35px;
 
 }
 .lines-effect{

@@ -6,7 +6,7 @@
 
                         <div class="imagen">
                             
-                                <img src="" alt="" class="imag">
+                                <img src="{{user.photo}}" alt="" class="imag">
                             
                         </div>
 
@@ -22,21 +22,21 @@
                                 <div class="datos">     
 
                                         <label for="name">Nombre</label>
-                                        <p clases="estilos"></p>
+                                        <p clases="estilos">{{user.name}}</p>
 
                                 </div>  
                                 
                                 <div class="datos">
 
                                         <label for="apellido">Apellido</label>
-                                        <p clases="estilos"></p>
+                                        <p clases="estilos">{{user.last_name}}</p>
 
                                 </div>
 
                                 <div class="datos">
 
                                         <label for="email">Email</label>
-                                        <p clases="estilos"></p>
+                                        <p clases="estilos">{{user.email}}</p>
                                 </div>
 
                         </div>
@@ -52,17 +52,17 @@
 
                         <div class="formulario1">
 
-                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" #name>
                         
-                            <input type="text" class="form-control" id="apellido" placeholder="Apellidos">
+                            <input type="text" class="form-control" id="apellido" placeholder="Apellidos" #last_name>
                     
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" placeholder="Email" #email>
 
-                            <input type="url" class="form-control" id="url" placeholder="Url">
+                            <input type="url" class="form-control" id="url" placeholder="Url" #photo>
                         
                         </div>
 
-                        <button type="reset" class="btn" >Modificar</button>
+                        <button type="reset" class="btn" (click) ="enviar(name.value, last_name.value, email.value, photo.value)">Modificar</button>
     
                     </div>
 
