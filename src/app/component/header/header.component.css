@@ -25,7 +25,6 @@ h1{
     height: 63px;
 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
 
@@ -56,7 +55,13 @@ li a:hover {
 }
 .dropdown-menu{
 
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+
+}
+.offcanvas{
+
+    background-color: black;
+    color: white;
 }
 .navbar-toggler-icon{
 
