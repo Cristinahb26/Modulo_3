@@ -30,8 +30,8 @@ section{
     height: 550px;
     width: 430px;
     margin-left: 10px;
-    background-color: rgba(36, 37, 37, 0.3);
-    border: rgb(103, 72, 32, 0.5) double;
+    background-color: rgba(36, 37, 37, 0.2);
+    border: rgb(103, 72, 32, 0.3) double;
     border-radius: 20px;
     border-width: 10px;
     
@@ -115,7 +115,7 @@ h3{
 
     height: 35px;
     width: 350px;
-    border-radius: 5px;
+    border-radius: 8px;
 
 }
 label{
@@ -131,8 +131,8 @@ label{
 
     height: 550px;
     width: 430px;
-    background-color: rgba(36, 37, 37, 0.3);
-    border: rgb(103, 72, 32, 0.5) double;
+    background-color: rgba(36, 37, 37, 0.2);
+    border: rgb(103, 72, 32, 0.3) double;
     border-radius: 20px;
     border-width: 10px;
     
