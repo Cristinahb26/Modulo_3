@@ -57,7 +57,7 @@ img{
 p{
 
     font-size: 16px;
-    height: 20px;
+    height: 30px;
     margin-bottom: 5px;
     
 }
@@ -80,12 +80,12 @@ h4{
     font-size: 17px;
     height: 20px;
     margin-left: 95px;
-    padding-top: 5px;
+    padding-top: 2px;
    
 }
 h5{
 
-    font-size: 20px;
+    font-size: 17px;
     margin-top: 3px;
     margin-bottom: 2px;
 }
@@ -93,6 +93,7 @@ h6{
 
     font-size: 14px;
     height: 20px;
+    text-transform: capitalize;
 
 }
 a{
@@ -101,7 +102,7 @@ a{
     width: 230px;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-top: 8px;
+    margin-top: 5px;
 
 }
 a:hover{

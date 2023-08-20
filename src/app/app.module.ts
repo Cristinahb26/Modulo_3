@@ -10,6 +10,7 @@ import { FormRegisterComponent } from './component/form-register/form-register.c
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
+import { RefCodigoPipe } from './pipes/ref-codigo.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BooksComponent } from './pages/books/books.component';
     RegisterComponent,
     ProfileComponent,
     BooksComponent,
+    RefCodigoPipe,
   ],
   imports: [
     BrowserModule,
