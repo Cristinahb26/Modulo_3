@@ -1,0 +1,211 @@
+main{
+
+    width: 1465;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+h3{
+
+    height: 620px;
+    font-size: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.card{
+
+    height: 550px;
+    width: 100px;
+    padding-top: 20px;
+    box-shadow: 2px 2px 10px sienna, -2px -2px 10px  sienna;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+.card-body{
+
+    width: 270px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+
+}
+img{
+
+    width: 220px;
+    height: 260px;
+
+}
+p{
+
+    font-size: 16px;
+    height: 30px;
+    margin-bottom: 5px;
+    
+}
+.card-author{
+
+    font-size: 16px ;
+    padding-top: 7px;
+
+}
+.lines-effect{
+
+    height: 1px;
+    width: 250px;
+    margin-bottom: 2px;
+    background-color: black;
+
+}
+h4{
+
+    font-size: 17px;
+    height: 20px;
+    margin-left: 95px;
+    padding-top: 2px;
+   
+}
+h5{
+
+    font-size: 17px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+h6{
+
+    font-size: 14px;
+    height: 20px;
+    text-transform: capitalize;
+
+}
+a{
+
+    background-color:darkorange ;
+    width: 230px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+
+}
+a:hover{
+
+    background-color: peru;
+}
+.even{
+
+    background-color: peru;
+
+}
+.even:hover{
+
+    background-color: darkorange;
+
+}
+.formulario{
+
+    height: 660px;
+    width: 1465px;
+
+    background-image: url(../../../assets/img/fondoMagico.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+form{
+
+    height: 550px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+.titulo{
+
+    height: 80px;
+    width: 320px;
+    color: aliceblue;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+h2{
+
+    font-size: 50px;
+}
+.formul{
+
+    height: 350px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+input{
+
+    background-color: rgba(21, 22, 22, 0.2);
+    border: 1px solid rgba(114, 117, 117, 0.3);
+    color: aliceblue;
+
+}
+::placeholder {
+
+    color:aliceblue;
+    text-align:center;
+
+}
+button{
+
+    background-color: darkorange;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+button:hover{
+
+    background-color: burlywood;
+    color: white;
+}
