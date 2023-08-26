@@ -28,8 +28,8 @@ export class BooksComponent {
     this.books.push(newBook);
 
   } 
-  deleteCard(deleteBook:string): void{
 
-    this.books = this.books.filter(Book => Book.title != deleteBook)
-  }
+  deleteCard(id_book: number) {
+      this.books = this.books.filter((book) => book.id_book !== id_book);
+}
 }

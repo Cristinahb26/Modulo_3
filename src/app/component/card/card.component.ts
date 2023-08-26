@@ -10,10 +10,10 @@ export class CardComponent {
 
   @Input() book: Book;
   @Input() par: boolean;
-  @Output() deleteBook = new EventEmitter <string>();
+  @Output() deleteBook = new EventEmitter <number>();
   
-  deleteCard():void{
+  enviarCard():void{
 
-    this.deleteBook.emit(this.book.title);
+    this.deleteBook.emit(this.book.id_book);
   }
 }
