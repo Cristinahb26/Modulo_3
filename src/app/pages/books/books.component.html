@@ -1,10 +1,21 @@
-<main class="contenedor-tarjetas" *ngIf="books.length>0; else noHay">
+<main>
 
-    <ng-container *ngFor = "let book of books; let par =even">
+    
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Id Libro" aria-label="Buscar">
+            <button class="btn btn-outline" type="submit">Buscar</button>
+        </form>
+    
 
-        <app-card [book]="book" [par]="par" (deleteBook) = "deleteCard($event)"  ></app-card>
+        <div class="contenedor-tarjetas" *ngIf="books.length>0; else noHay">
 
-    </ng-container>
+            <ng-container *ngFor = "let book of books; let par =even">
+
+                <app-card [book]="book" [par]="par" (deleteBook) = "deleteCard($event)"  ></app-card>
+
+            </ng-container>
+
+        </div>
 
 </main>
 
@@ -16,31 +27,3 @@
 
 </ng-template>
 
-<div class="formulario">
-
-    <form>
-
-            <div class="titulo">
-                <h2>Añadir Libro</h2>
-            </div>
-
-            <div class="formul">
-
-                <input type="text" class="form-control" id="title" placeholder="Titulo" #title>
-
-                <input type="text" class="form-control" id="type" placeholder="Tapa blanda/dura" #type>
-
-                <input type="text" class="form-control" id="author" placeholder="Autor" #author>
-
-                <input type="text" class="form-control" id="price" placeholder="Precio" #price>
-        
-                <input type="text" class="form-control" id="photo" placeholder="Photo" #photo>
-
-                <input type="text" class="form-control" id="id_book" placeholder="Codigo" #id_book>
-
-            </div>
-
-            <button type="reset" (click)="addBook(id_book.value, title.value,type.value,author.value,price.value,photo.value)">Insertar Libro</button>
-
-    </form>
-</div>
