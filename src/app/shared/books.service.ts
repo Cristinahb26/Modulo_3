@@ -23,9 +23,32 @@ export class BooksService {
    getAll(): Book[] {
     
      return this.books;
-  }
-  addBook(newBook: Book):void {
+   }
+   getOne(id_book: number): Book {
 
-    this.books.push(newBook)
+    return this.books.find(book => book.id_book == id_book);
+   
   }
+   addBook(newBook: Book):void {
+
+    this.books.push(newBook);
+   
+  }
+
+   editar(book: Book): Boolean {
+    for(let i=0; i < this.books.length; i++){
+      if(this.books[i].id_book == book.id_book){
+         this.books[i]= book
+         return true;
+      }  
+    }
+  }
+
+   delete(id_book: number): Boolean {
+    let index = this.books.findIndex(book => book.id_book === id_book);
+    if (index !== -1) {
+      this.books.splice(index, 1);
+      return true;
+    }
+  }  
 }

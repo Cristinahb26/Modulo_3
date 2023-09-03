@@ -2,8 +2,8 @@
 
     
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Id Libro" aria-label="Buscar">
-            <button class="btn btn-outline" type="submit">Buscar</button>
+            <input class="form-control me-2" type="search" placeholder="Id Libro" aria-label="Buscar" (keyup)="search(search_id_book.value)" #search_id_book>
+            <button class="btn btn-outline" type="submit" (click)="search(search_id_book)">Buscar</button>
         </form>
     
 
