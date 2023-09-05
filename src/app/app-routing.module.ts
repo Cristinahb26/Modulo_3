@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: "footer", component: FooterComponent},
   { path: "profile", component: ProfileComponent},
   { path: "books", component: BooksComponent},
+  
 
 ];
 

@@ -26,7 +26,7 @@ body{
 
     text-align: center;
     font-size: 3em;
-    color: #fff;
+    color: #cc0c0c;
     margin-bottom: 30px;
     margin-top: 10px;
     margin-left: 70px;
@@ -57,8 +57,8 @@ body{
 .input-mail:focus ~ label,
 .input-mail:valid ~ label {
 
-    top: -55px;
-    font-size: 15px;
+    top: -42px;
+    font-size: 10px;
     color: #f8ece2;
     border: none;
 
@@ -94,29 +94,29 @@ body{
     margin-right: 20px;
 
 }
-button {
-
+.btn{
     font-size: 20px;
     width: 70%;
     margin-left: 85px;
     font-weight: 500;
-    background-color: peru;
-    color: black;
+    background-color: rgb(237, 133, 28);
+    color: rgb(15, 15, 15);
     border: none;
     outline: none;
-
 }
-button:active {
 
+.btn:active {
     font-size: 27px;
-
 }
-button:hover {
 
-    color: #fff;
+.btn:hover {
+    color: #ece5e5;
     background-color: darkorange;
-
 }
+.btn {
+    background-color:darkorange;
+}
+
 .box p {
 
     text-align: center;
@@ -130,3 +130,20 @@ p {
 
     color: #fff;
 }
+
+.has-error input {
+    border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 10px;
+    margin-top: -20px;
+  }
+    
+  .error-message1 {
+    color: red;
+    font-size: 10px;
+ 
+  }
+  
