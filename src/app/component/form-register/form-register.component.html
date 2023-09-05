@@ -1,77 +1,98 @@
 <body>
-
     <div class="login">
-
-        <form action="#">
-
-            <div class="sign-up">
-                <h2>Registrate</h2>
+      <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+        <div class="sign-up">
+          <h2>Regístrate</h2>
+        </div>
+  
+        <!-- Nombre -->
+        <div class="input" [ngClass]="{'has-error': nombre.invalid && (nombre.dirty || nombre.touched)}">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" class="input-mail" name="nombre" [(ngModel)]="registrationModel.nombre" required minlength="2"         #nombre="ngModel">
+          <label for="input">Nombre</label>
+          <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error-message">
+            <div *ngIf="nombre.hasError('required')">Nombre es requerido</div>
+            <div *ngIf="nombre.hasError('minlength')">Nombre debe tener al menos 2 caracteres</div>
+          </div>
+        </div>
+  
+        <!-- Apellidos -->
+        <div class="input" [ngClass]="{'has-error': apellidos.invalid && (apellidos.dirty || apellidos.touched)}">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" class="input-mail" name="apellidos" [(ngModel)]="registrationModel.apellidos" required #apellidos="ngModel">
+          <label for="input">Apellidos</label>
+          <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)" class="error-message">
+            <div *ngIf="apellidos.hasError('required')">Apellidos son requeridos</div>
+          </div>
+        </div>
+  
+        <!-- Email -->
+        <div class="input" [ngClass]="{'has-error': email.invalid && (email.dirty || email.touched)}">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" class="input-mail" name="email" [(ngModel)]="registrationModel.email" required #email="ngModel">
+          <label for="input">Email</label>
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+            <div *ngIf="email.hasError('required')">Email es requerido</div>
+            <div *ngIf="email.hasError('email')">Email no es válido</div>
+          </div>
+        </div>
+  
+        <!-- URL -->
+        <div class="input" [ngClass]="{'has-error': url.invalid && (url.dirty || url.touched)}">
+          <i class="fa fa-picture-o"></i>
+          <input type="url" class="input-mail" name="url" [(ngModel)]="registrationModel.url" required #url="ngModel">
+          <label for="input">Url</label>
+          <div *ngIf="url.invalid && (url.dirty || url.touched)" class="error-message">
+            <div *ngIf="url.hasError('required')">URL es requerido</div>
+            <div *ngIf="url.hasError('url')">URL no es válida</div>
+          </div>
+        </div>
+  
+        <!-- Contraseña -->
+        <div class="input" [ngClass]="{'has-error': contrasena.invalid && (contrasena.dirty || contrasena.touched)}">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" class="input-mail" name="contrasena" [(ngModel)]="registrationModel.contrasena" required minlength="6" #contrasena="ngModel">
+          <label for="input">Contraseña</label>
+          <div *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)" class="error-message">
+            <div *ngIf="contrasena.hasError('required')">Contraseña es requerida</div>
+            <div *ngIf="contrasena.hasError('minlength')">Contraseña debe tener al menos 6 caracteres</div>
+          </div>
+        </div>
+  
+        <!-- Confirmar Contraseña -->
+        <div class="input" [ngClass]="{'has-error': confirmarContrasena.invalid && (confirmarContrasena.dirty || confirmarContrasena.touched)}">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" class="input-mail" name="confirmarContrasena" [(ngModel)]="registrationModel.confirmarContrasena" required #confirmarContrasena="ngModel">
+          <label for="input">Confirmar Contraseña</label>
+          <div *ngIf="confirmarContrasena.invalid && (confirmarContrasena.dirty || confirmarContrasena.touched)" class="error-message">
+            <div *ngIf="confirmarContrasena.hasError('required')">Confirmar Contraseña es requerida</div>
+            <div *ngIf="registrationModel.confirmarContrasena !== registrationModel.contrasena">
+              Las contraseñas no coinciden
             </div>
-
-            <div class="input">
-
-                <i class="fa-solid fa-user"></i>
-                <input type="text" class="input-mail" autocomplete="off" required>
-                <label for="input"> Nombre </label>
-
-            </div>
-
-            <div class="input">
-
-                <i class="fa-solid fa-user"></i>
-                <input type="text" class="input-mail" autocomplete="off" required>
-                <label for="input"> Apellidos </label>
-                
-            </div>
-
-            <div class="input">
-
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" class="input-mail" autocomplete="off" required>
-                <label for="input"> Email </label>
-                
-            </div>
-
-            <div class="input">
-
-                <i class="fa fa-picture-o"></i>
-                <input type="url" class="input-mail" autocomplete="off" required>
-                <label for="input"> Url </label>
-                
-            </div>
-
-            <div class="input">
-
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" class="input-mail" autocomplete="off" required>
-                <label for="input"> Contraseña </label>
-                
-            </div>
-
-            <div class="input">
-
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" class="input-mail" autocomplete="off" required>
-                <label for="input"> Confirmar Contraseña </label>
-                
-            </div>
-
-            <div class="checkbox">
-
-                <input type="checkbox" class="check" autocomplete="off" required>
-                <label for="check">Acepto los terminos</label>
-                
-            </div>
-
-            
-            <div class="button">
-
-                 <button class="btn">Registrarse</button>
-                
-            </div>
-
-
-        </form>
-    </div>
-
+          </div>
+        </div>
+  
+        <!-- Aceptar los términos -->
+        <div class="checkbox" [ngClass]="{'has-error': aceptarTerminos.invalid && (aceptarTerminos.dirty || aceptarTerminos.touched)}">
+          <input type="checkbox" class="check" name="aceptarTerminos" [(ngModel)]="registrationModel.aceptarTerminos" required #aceptarTerminos="ngModel">
+          <label for="check">Acepto los términos</label>
+          <div *ngIf="aceptarTerminos.invalid && (aceptarTerminos.dirty || aceptarTerminos.touched)" class="error-message1">
+            <div *ngIf="aceptarTerminos.hasError('required')">Debes aceptar los términos</div>
+          </div>
+        </div>
+  
+       <!-- Submit Button -->
+      <div class="button">
+        <button type="submit" class="btn" [disabled]="!registrationForm.valid">Registrarse</button>
+      </div>
+    </form>
+  </div>
 </body>
+
+
+
+
+
+
+
+
