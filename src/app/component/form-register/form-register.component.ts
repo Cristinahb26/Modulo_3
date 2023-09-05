@@ -21,10 +21,10 @@ export class FormRegisterComponent {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      // Form is valid, you can perform further actions here
+      
       console.log('Form submitted successfully!', this.registrationModel);
     } else {
-      // Form is invalid, show error messages or take appropriate action
+     
     }
   }
 }
