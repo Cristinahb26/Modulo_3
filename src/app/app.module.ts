@@ -14,7 +14,6 @@ import { RefCodigoPipe } from './pipes/ref-codigo.pipe';
 import { CardComponent } from './component/card/card.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

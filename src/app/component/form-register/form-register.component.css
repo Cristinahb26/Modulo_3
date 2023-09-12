@@ -58,7 +58,7 @@ body{
 .input-mail:valid ~ label {
 
     top: -44px;
-    font-size: 10px;
+    font-size: 15px;
     color: #f8ece2;
     border: none;
 
