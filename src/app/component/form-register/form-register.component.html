@@ -24,37 +24,51 @@
           <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)" class="error-message">
             <div *ngIf="apellidos.hasError('required')">El campo es obligatorio</div>
           </div>
-
-          <div class="input">
-
-              <i class="fa-solid fa-envelope"></i>
-              <input type="email" class="input-mail" autocomplete="off" required>
-              <label for="input"> Email </label>
-              
+        </div>
+  
+        <!-- Email -->
+        <div class="input" [ngClass]="{'has-error': email.invalid && (email.dirty || email.touched)}">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" class="input-mail" name="email" [(ngModel)]="registrationModel.email" required #email="ngModel">
+          <label for="input">Email</label>
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+            <div *ngIf="email.hasError('required')">Email es obligatorio</div>
+            <div *ngIf="email.hasError('email')">Email no es válido</div>
           </div>
-
-          <div class="input">
-
-              <i class="fa fa-picture-o"></i>
-              <input type="url" class="input-mail" autocomplete="off" required>
-              <label for="input"> Url </label>
-              
+        </div>
+  
+        <!-- URL -->
+        <div class="input" [ngClass]="{'has-error': url.invalid && (url.dirty || url.touched)}">
+          <i class="fa fa-picture-o"></i>
+          <input type="url" class="input-mail" name="url" [(ngModel)]="registrationModel.url" required #url="ngModel">
+          <label for="input">Url</label>
+          <div *ngIf="url.invalid && (url.dirty || url.touched)" class="error-message">
+            <div *ngIf="url.hasError('required')">URL es obligatorio</div>
+            <div *ngIf="url.hasError('url')">URL no es válida</div>
           </div>
-
-          <div class="input">
-
-              <i class="fa-solid fa-lock"></i>
-              <input type="password" class="input-mail" autocomplete="off" required>
-              <label for="input"> Contraseña </label>
-              
+        </div>
+  
+        <!-- Contraseña -->
+        <div class="input" [ngClass]="{'has-error': contrasena.invalid && (contrasena.dirty || contrasena.touched)}">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" class="input-mail" name="contrasena" [(ngModel)]="registrationModel.contrasena" required minlength="6" #contrasena="ngModel">
+          <label for="input">Contraseña</label>
+          <div *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)" class="error-message">
+            <div *ngIf="contrasena.hasError('required')">Contraseña es obligatoria</div>
+            <div *ngIf="contrasena.hasError('minlength')">Contraseña debe tener al menos 6 caracteres</div>
           </div>
-
-          <div class="input">
-
-              <i class="fa-solid fa-lock"></i>
-              <input type="password" class="input-mail" autocomplete="off" required>
-              <label for="input"> Confirmar Contraseña </label>
-              
+        </div>
+  
+        <!-- Confirmar Contraseña -->
+        <div class="input" [ngClass]="{'has-error': confirmarContrasena.invalid && (confirmarContrasena.dirty || confirmarContrasena.touched)}">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" class="input-mail" name="confirmarContrasena" [(ngModel)]="registrationModel.confirmarContrasena" required #confirmarContrasena="ngModel">
+          <label for="input">Confirmar Contraseña</label>
+          <div *ngIf="confirmarContrasena.invalid && (confirmarContrasena.dirty || confirmarContrasena.touched)" class="error-message">
+            <div *ngIf="confirmarContrasena.hasError('required')">Confirmar Contraseña es obligatoria</div>
+            <div *ngIf="registrationModel.confirmarContrasena !== registrationModel.contrasena">
+              Las contraseñas no coinciden
+            </div>
           </div>
         </div>
   
