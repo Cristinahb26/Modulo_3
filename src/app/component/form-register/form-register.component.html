@@ -32,7 +32,7 @@
           <input type="email" class="input-mail" name="email" [(ngModel)]="registrationModel.email" required #email="ngModel">
           <label for="input">Email</label>
           <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
-            <div *ngIf="email.hasError('required')">Email es requerido</div>
+            <div *ngIf="email.hasError('required')">Email es obligatorio</div>
             <div *ngIf="email.hasError('email')">Email no es válido</div>
           </div>
         </div>
@@ -43,7 +43,7 @@
           <input type="url" class="input-mail" name="url" [(ngModel)]="registrationModel.url" required #url="ngModel">
           <label for="input">Url</label>
           <div *ngIf="url.invalid && (url.dirty || url.touched)" class="error-message">
-            <div *ngIf="url.hasError('required')">URL es requerido</div>
+            <div *ngIf="url.hasError('required')">URL es obligatorio</div>
             <div *ngIf="url.hasError('url')">URL no es válida</div>
           </div>
         </div>
@@ -54,7 +54,7 @@
           <input type="password" class="input-mail" name="contrasena" [(ngModel)]="registrationModel.contrasena" required minlength="6" #contrasena="ngModel">
           <label for="input">Contraseña</label>
           <div *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)" class="error-message">
-            <div *ngIf="contrasena.hasError('required')">Contraseña es requerida</div>
+            <div *ngIf="contrasena.hasError('required')">Contraseña es obligatoria</div>
             <div *ngIf="contrasena.hasError('minlength')">Contraseña debe tener al menos 6 caracteres</div>
           </div>
         </div>
@@ -65,7 +65,7 @@
           <input type="password" class="input-mail" name="confirmarContrasena" [(ngModel)]="registrationModel.confirmarContrasena" required #confirmarContrasena="ngModel">
           <label for="input">Confirmar Contraseña</label>
           <div *ngIf="confirmarContrasena.invalid && (confirmarContrasena.dirty || confirmarContrasena.touched)" class="error-message">
-            <div *ngIf="confirmarContrasena.hasError('required')">Confirmar Contraseña es requerida</div>
+            <div *ngIf="confirmarContrasena.hasError('required')">Confirmar Contraseña es obligatoria</div>
             <div *ngIf="registrationModel.confirmarContrasena !== registrationModel.contrasena">
               Las contraseñas no coinciden
             </div>
