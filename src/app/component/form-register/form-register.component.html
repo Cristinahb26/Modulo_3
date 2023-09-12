@@ -11,7 +11,7 @@
           <input type="text" class="input-mail" name="nombre" [(ngModel)]="registrationModel.nombre" required minlength="2"  #nombre="ngModel">
           <label for="input">Nombre</label>
           <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error-message">
-            <div *ngIf="nombre.hasError('required')">Nombre es requerido</div>
+            <div *ngIf="nombre.hasError('required')">El campo es obligatorio</div>
             <div *ngIf="nombre.hasError('minlength')">Nombre debe tener al menos 2 caracteres</div>
           </div>
         </div>
@@ -22,7 +22,7 @@
           <input type="text" class="input-mail" name="apellidos" [(ngModel)]="registrationModel.apellidos" required #apellidos="ngModel">
           <label for="input">Apellidos</label>
           <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)" class="error-message">
-            <div *ngIf="apellidos.hasError('required')">Apellidos son requeridos</div>
+            <div *ngIf="apellidos.hasError('required')">El campo es obligatorio</div>
           </div>
         </div>
   
