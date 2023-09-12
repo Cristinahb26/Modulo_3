@@ -57,7 +57,7 @@ body{
 .input-mail:focus ~ label,
 .input-mail:valid ~ label {
 
-    top: -42px;
+    top: -44px;
     font-size: 10px;
     color: #f8ece2;
     border: none;
@@ -66,7 +66,7 @@ body{
 .input label{
 
     position: relative;
-    bottom: 30px;
+    bottom: 28px;
     color: #fff;
 
     display: flex;
@@ -84,7 +84,7 @@ body{
 }
 .login .checkbox {
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding-left: 60px;
     color: #fff;
 
@@ -99,8 +99,6 @@ body{
     width: 70%;
     margin-left: 85px;
     font-weight: 500;
-    background-color: rgb(237, 133, 28);
-    color: rgb(15, 15, 15);
     border: none;
     outline: none;
 }
@@ -131,19 +129,4 @@ p {
     color: #fff;
 }
 
-.has-error input {
-    border-color: red;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 10px;
-    margin-top: -20px;
-  }
-    
-  .error-message1 {
-    color: red;
-    font-size: 10px;
- 
-  }
   
