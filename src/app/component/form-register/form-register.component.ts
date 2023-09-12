@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms'
 
 class RegistrationModel {
   nombre: string;
@@ -28,3 +28,4 @@ export class FormRegisterComponent {
     }
   }
 }
+

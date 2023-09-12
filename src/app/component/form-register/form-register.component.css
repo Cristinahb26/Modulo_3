@@ -51,6 +51,7 @@ body{
     border-bottom: 2px solid #fff;
     /* transition: 3s; */
     color: #fff;
+    margin-bottom: -30px;
 
 }
 
@@ -58,7 +59,7 @@ body{
 .input-mail:valid ~ label {
 
     top: -44px;
-    font-size: 10px;
+    font-size: 15px;
     color: #f8ece2;
     border: none;
 
@@ -127,6 +128,20 @@ body{
 p {
 
     color: #fff;
-}
 
+}
+.has-error input {
+    border-color: red;
+  }
   
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -18px;
+  }
+    
+  .error-message1 {
+    color: red;
+    font-size: 12px;
+ 
+  }
