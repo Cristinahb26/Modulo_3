@@ -23,7 +23,7 @@ export class AddBookComponent {
     let newBook = new Book(title, type, author, price, photo, id_book);
     this.bookService.addBook(newBook);
     this.router.navigate(['/books']);
-
+    
   } 
 
 }
