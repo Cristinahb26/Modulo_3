@@ -1,4 +1,17 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms'
+
+class RegistrationModel {
+  
+  nombre: string;
+  apellidos: string;
+  email: string;
+  url: string;
+  contrasena: string;
+  confirmarContrasena: string;
+  aceptarTerminos: boolean;
+
+}
 
 @Component({
   selector: 'app-form-register',
