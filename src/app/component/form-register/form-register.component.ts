@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms'
 
 class RegistrationModel {
+  
   nombre: string;
   apellidos: string;
   email: string;
@@ -9,6 +10,7 @@ class RegistrationModel {
   contrasena: string;
   confirmarContrasena: string;
   aceptarTerminos: boolean;
+
 }
 
 @Component({
