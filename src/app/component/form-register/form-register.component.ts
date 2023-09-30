@@ -24,7 +24,6 @@ export class FormRegisterComponent {
       
       console.log('Form submitted successfully!', this.registrationModel);
     } else {
-     
     }
   }
 }
