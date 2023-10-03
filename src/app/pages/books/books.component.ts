@@ -12,31 +12,34 @@ export class BooksComponent {
      public books: Book[];
 
      constructor(private bookService: BooksService){
-
-      this.books = this.bookService.getAll();
+      this.bookService.getAll().subscribe((data: Book[]) => {
+        this.books = data;
+      });
   
     }
     search(id_book: number) {
       if (id_book) {
   
-        // Buscar un libro por ID
-        this.books =  [this.bookService.getOne(id_book)];
+        this.bookService.getOne(id_book).subscribe((data: Book) =>{
+           this.books = [data];
+        });
   
       } else {
         
-        // Mostrar todos los libros cuando no se proporciona un ID
-        this.books = this.bookService.getAll();
+        this.bookService.getAll().subscribe((data: Book[]) =>{
+          this.books = data;
+        });
   
       }
     }
   
     deleteCard(id_book: number) {
   
-        this.books = this.books.filter(Book => Book.id_book != id_book);
-  
         if (id_book) {
-          this.books.splice(id_book, 1);
-          this.bookService.delete(id_book);
-       }
+      
+            this.bookService.delete(id_book).subscribe(() => {
+                    this.books = this.books.filter(book => book.id_book !== id_book); // Actualiza la lista después de eliminar
+                  });
+        }
     }
-  }
+}

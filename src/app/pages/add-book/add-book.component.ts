@@ -14,7 +14,7 @@ export class AddBookComponent {
 
   constructor(private bookService: BooksService, public router:Router) {
   
-    this.books =this.bookService.getAll();
+    this.bookService.getAll();
     
   } 
 
