@@ -11,7 +11,7 @@
 
             <ng-container *ngFor = "let book of books; let par =even">
 
-                <app-card [book]="book" [par]="par" (deleteBook) = "deleteCard($event)"  ></app-card>
+                <app-card [book]="book" [par]="par" (deleteBook) = "deleteCard($event)"></app-card>
 
             </ng-container>
 

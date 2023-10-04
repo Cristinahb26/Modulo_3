@@ -12,7 +12,7 @@ export class AddBookComponent {
    
   public books: Book[];
 
-  constructor(private bookService: BooksService, public router:Router) {
+  constructor(public bookService: BooksService, public router:Router) {
   
     this.bookService.getAll();
     
@@ -21,7 +21,9 @@ export class AddBookComponent {
   addBook(id_book:number, title:string, type:string, author:string, price:number, photo:string) {
 
     let newBook = new Book(title, type, author, price, photo, id_book);
-    this.bookService.addBook(newBook);
+    this.bookService.addBook(newBook).subscribe((data:Book[]) => {
+       this.books = data;
+    });
     this.router.navigate(['/books']);
 
   } 

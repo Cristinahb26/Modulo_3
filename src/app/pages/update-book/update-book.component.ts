@@ -12,17 +12,21 @@ export class UpdateBookComponent {
 
   public books: Book[];
 
-  constructor(private bookService: BooksService, public router:Router){
+  constructor(public bookService: BooksService, public router:Router){
 
-     this.books = this.bookService.getAll();
-
+     this.bookService.getAll().subscribe((data: Book[]) => {
+       this.books = data;
+     });
   }
 
   editar(title:string, type:string, author:string, price:number, photo:string, id_book:number){
 
     let book = new Book (title, type, author, price, photo, id_book)
-    this.bookService.editar(book);
-    this.router.navigate(['/books'])
+    this.bookService.editar(book).subscribe((data) => {
+       console.log(data);
+       
+    });
+    this.router.navigate(['/books']);
   }
 
 }
