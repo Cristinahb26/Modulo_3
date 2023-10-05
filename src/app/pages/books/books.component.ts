@@ -30,15 +30,14 @@ export class BooksComponent {
           this.books = data;
         });
       }
-    
     }
     
     deleteCard(id_book: number) {
   
-            this.bookService.delete(id_book).subscribe(() => {
-                this.books = this.books.filter(book => book.id_book !== id_book)
-                
-                  });
-        }
-    
+    if (id_book) {
+      this.bookService.delete(id_book).subscribe(() => {
+        this.books = this.books.filter(book => book.id_book !== id_book); 
+      });
+    }
+  }   
 }
