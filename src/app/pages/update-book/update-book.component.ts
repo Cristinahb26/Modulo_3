@@ -22,11 +22,11 @@ export class UpdateBookComponent {
   editar(title:string, type:string, author:string, price:number, photo:string, id_book:number){
 
     let book = new Book (title, type, author, price, photo, id_book)
-    this.bookService.editar(book).subscribe((data) => {
+    this.bookService.editar(book).subscribe((data: Book[]) => {
        console.log(data);
        
     });
-    this.router.navigate(['/books']);
+    this.router.navigateByUrl('/books');
   }
 
 }
