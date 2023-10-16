@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/shared/user.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,6 +13,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class FormLoginComponent {
 
   public form_login: FormGroup;
+  public user: User;
+
+  constructor(private userService: UserService, public router: Router) {}
 
   ngOnInit(){
     
@@ -24,7 +30,7 @@ export class FormLoginComponent {
 
   }
 
-  entrar(){
+  iniciarSesion(){
 
     let email = this.form_login.get('email').value;
     let password = this.form_login.get('password').value;
@@ -32,6 +38,18 @@ export class FormLoginComponent {
     console.log(email);
     console.log(password);
 
-  }
-
+    this.userService.login(this.user).subscribe((data) => {
+      
+      if (data['success']) {
+        // Actualizar atributos logueado y usuario
+        this.userService.logueado = true;
+        this.userService.user = data['user'];
+  
+        // Redireccionar a la página de libros
+        this.router.navigate(['/books']);
+      } else {
+        console.log('Los datos de inicio de sesión no son correctos');
+      }
+    });
+}
 }

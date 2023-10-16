@@ -1,5 +1,21 @@
-body{
+/* .sign-up h2{
 
+    text-align: center;
+    font-size: 3em;
+    color: #cc0c0c;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 70px;
+    text-shadow: 3px 3px peru;
+
+}
+
+ */
+
+
+
+  form{
+   
     width: 100%;
     height: 82.6vh;
 
@@ -11,82 +27,77 @@ body{
     background-size: contain;
 
 }
-.login{
+.contenedor{
 
-    width: 500px;
-    height: 580px;
+    height: 520px;
+    width: 25%;
+    background-color: rgb(255, 255, 255, 0.1);
+    border: 2px solid rgb(227, 227, 227, 0.2);
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px grey;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    gap: 15px;
 }
-.sign-up h2{
+.titulo{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 70px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
 
     text-align: center;
     font-size: 3em;
-    color: #cc0c0c;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    margin-left: 70px;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 20px;
     text-shadow: 3px 3px peru;
 
 }
-.login .input{
+.formulario{
 
-    width: 25vw;
-    height: 30px;
-    margin-bottom: 30px;
-    margin-left: 50px;
-
-}
-.input-mail{
-
-    font-size: 20px;
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    border-bottom: 2px solid #fff;
-    /* transition: 3s; */
-    color: #fff;
-    margin-bottom: -30px;
-
-}
-
-.input-mail:focus ~ label,
-.input-mail:valid ~ label {
-
-    top: -44px;
-    font-size: 15px;
-    color: #f8ece2;
-    border: none;
-
-}
-.input label{
-
-    position: relative;
-    bottom: 28px;
-    color: #fff;
+    height: 250px;
+    width: 90%;
 
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
 }
 
-.input i {
+input{
 
-    position: absolute;
-    right: 535px;
+    background-color: rgba(62, 61, 61, 0.1);
+    border: 2px solid rgb(227, 227, 227, 0.1);
+    border-radius: 10px;
     color: #fff;
-    font-size:  18px;
+    /* box-shadow: 3px 3px 1px rgb(253, 252, 252, 0.3); */
 
 }
-.login .checkbox {
+::placeholder {
 
-    margin-bottom: 25px;
-    padding-left: 60px;
+    color:aliceblue;
+
+}
+
+.invalid-feedback{
+
+    font-size: 12px;
+}
+.checkbox {
+
+    margin-bottom: 10px;
     color: #fff;
 
 }
@@ -97,51 +108,21 @@ body{
 }
 .btn{
     font-size: 20px;
-    width: 70%;
-    margin-left: 85px;
+    width: 90%;
+    margin-left: 25px;
     font-weight: 500;
     border: none;
     outline: none;
+    background-color:darkorange;
+    color: #fff;
 }
 
 .btn:active {
-    font-size: 27px;
+    font-size: 20px;
 }
 
 .btn:hover {
-    color: #ece5e5;
+    color: #1c1c1c;
     background-color: darkorange;
 }
-.btn {
-    background-color:darkorange;
-}
 
-.box p {
-
-    text-align: center;
-    margin: 20px 30px 0 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: #fff;
-
-}
-p {
-
-    color: #fff;
-
-}
-.has-error input {
-    border-color: red;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: -18px;
-  }
-    
-  .error-message1 {
-    color: red;
-    font-size: 12px;
- 
-  }
