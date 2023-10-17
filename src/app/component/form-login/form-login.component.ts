@@ -40,13 +40,12 @@ export class FormLoginComponent {
 
     this.userService.login(this.user).subscribe((data) => {
       
-      if (data['success']) {
-        // Actualizar atributos logueado y usuario
+      if (data) {
+      
         this.userService.logueado = true;
         this.userService.user = data['user'];
-  
-        // Redireccionar a la página de libros
         this.router.navigate(['/books']);
+
       } else {
         console.log('Los datos de inicio de sesión no son correctos');
       }

@@ -30,7 +30,7 @@
               </div>
 
               <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar Password" formControlName="confirmPassword" 
-              [ngClass]="{'is-invalid': (formRecord.get('confirmPassword').dirty || formRecord.get('confirmPassword').touched)  && formRecord.get('confirmPassword').invalid}">
+               [ngClass]="{'is-invalid': (formRecord.get('confirmPassword').dirty || formRecord.get('confirmPassword').touched)  && formRecord.get('confirmPassword').invalid}">
               <div *ngIf="!formRecord.get('confirmPassword').valid" class=invalid-feedback>
                   <div *ngIf="formRecord.get('confirmPassword').errors.required">*Campo es Obligatorio</div>
                   <div *ngIf="formRecord.get('confirmPassword').errors.minLength">Contraseña debe tener minimo 8 caracteres</div>
@@ -39,9 +39,9 @@
           </div>
                   <!-- Aceptar los términos -->
           <div class="checkbox">
-            <input type="checkbox" class="check" id="aceptarTerminos" formControlName="aceptarTerminos" 
-            [ngClass]="{'is-invalid': formRecord.get('aceptarTerminos').invalid && (formRecord.get('aceptarTerminos').dirty || formRecord.get('aceptarTerminos').touched)}">
-            <div *ngIf="!formRecord.get('aceptarTerminos').valid" class="invalid-feedback">Debes aceptar los términos</div>
+            <input type="checkbox" class="check" id="aceptarTerminos">
+            <!-- [ngClass]="{'is-invalid': formRecord.get('aceptarTerminos').invalid && (formRecord.get('aceptarTerminos').dirty || formRecord.get('aceptarTerminos').touched)}">
+            <div *ngIf="!formRecord.get('aceptarTerminos').valid" class="invalid-feedback">Debes aceptar los términos</div> -->
             <label for="check">Acepto los términos</label>
           
           </div>

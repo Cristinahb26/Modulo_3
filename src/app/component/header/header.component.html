@@ -9,7 +9,7 @@
           <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-bars" aria-hidden="true"></i>
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" *ngIf = !this.userService.logueado >
 
             <li><a class="dropdown-item fa fa-home" href="#" routerLink="/home"><font face="Arial Narrow">Home</font></a></li>
             <li><a class="dropdown-item fa fa-file-text" href="#" routerLink="/register"><font face="Arial Narrow">Register</font></a></li>
@@ -17,8 +17,8 @@
 
           </ul> 
 
-          <ng-template>
-              <ul>
+          <ng-template *ngIf = this.userService.logueado>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
 
                 <li><a class="dropdown-item fa fa-book" href="#" routerLink="/books"><font face="Arial Narrow">Books</font></a></li>
                 <li><a class="dropdown-item fa fa-book" href="#" routerLink="/addBook"><font face="Arial Narrow">AddBook</font></a></li>
