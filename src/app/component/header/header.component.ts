@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { UserService } from 'src/app/shared/user.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +8,6 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(public userService: UserService, public router:Router){}
-
-  logout() {
-    
-    this.userService.logueado = false;
-    this.router.navigate(['/home']);
-  }
+  constructor(public userService: UserService){}
 
 }

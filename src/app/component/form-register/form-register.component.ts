@@ -35,7 +35,7 @@ export class FormRegisterComponent {
        apellido: [, Validators.required],
        email: [, [Validators.required, Validators.email]],
        password: [, [Validators.required, Validators.minLength(minPassLength)]],
-       repetirPassword: [,[Validators.required, Validators.minLength(minPassLength)]],
+       confirmPassword: [,[Validators.required, Validators.minLength(minPassLength)]],
 
     });
 

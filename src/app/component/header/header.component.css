@@ -42,13 +42,13 @@ i{
     margin-right: 50px;
 }
 
-li a {
+a {
 
     text-decoration: none;
     margin-top: 10px;
     
 }
-li a:hover {
+a:hover {
 
     color: blue;
 

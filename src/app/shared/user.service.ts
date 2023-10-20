@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  private url: string = "http://localhost:3000/books";
+  private url: string = "http://localhost:3000";
   public logueado: boolean;
   public user: User;
 
@@ -26,4 +26,10 @@ export class UserService {
 
     return this.http.post(this.url + "/login", user);
   }
+  edit(user:User){
+
+    return this.http.put(this.url + "/usuario", user);
+
+  }
+ 
 }

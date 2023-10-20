@@ -35,15 +35,19 @@ export class FormLoginComponent {
     let email = this.form_login.get('email').value;
     let password = this.form_login.get('password').value;
 
+    this.user = new User (0, "", "", email, "", password)
+
     console.log(email);
     console.log(password);
 
     this.userService.login(this.user).subscribe((data) => {
       
+      console.log(data);
+      
       if (data) {
       
         this.userService.logueado = true;
-        this.userService.user = data['user'];
+        this.userService.user = data[0];
         this.router.navigate(['/books']);
 
       } else {
