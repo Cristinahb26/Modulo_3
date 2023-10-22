@@ -28,7 +28,7 @@ export class BooksService {
     return this.http.post(this.url, book);
 
    }
-   editar(book:Book){
+   edit(book:Book){
 
     return this.http.put(this.url, book);
 

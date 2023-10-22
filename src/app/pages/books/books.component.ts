@@ -15,13 +15,13 @@ export class BooksComponent {
      constructor(public bookService: BooksService, public userService: UserService){
       this.bookService.getAll().subscribe((data: Book[]) => {
         this.books = data;
-        console.log(data);
+       
       });
   
     }
     search(id_book: number) {
       if (id_book !== 0) {
-        this.books = this.books.filter(book => book.id_book === id_book);
+        
         this.bookService.getOne(this.userService.user.id_user, id_book).subscribe((data: Book[]) =>{
                  this.books = data;
            });
