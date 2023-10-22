@@ -9,6 +9,7 @@ import { UserService } from './user.service';
 export class BooksService {
 
   private url: string = "http://localhost:3000/book";
+  private url1: string = "http://localhost:3000/bookId";
 
   constructor(private http: HttpClient, public userService: UserService) {
     
@@ -20,7 +21,7 @@ export class BooksService {
   }
    getOne(id_user: number, id_book:number){
 
-    return this.http.get(this.url + '?id_user=' + id_user + '&id_book=' + id_book);
+    return this.http.get(this.url1 + '?id_user=' + id_user + '&id_book=' + id_book);
 
   }
    addBook(book:Book){

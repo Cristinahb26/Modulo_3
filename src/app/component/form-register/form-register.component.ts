@@ -40,7 +40,6 @@ export class FormRegisterComponent {
     });
 
   }
-  // ngOnInit():void{}
 
   registerUser() {
 
